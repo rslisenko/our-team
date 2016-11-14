@@ -1,0 +1,243 @@
+@import "normalize";
+@import "layout";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:400,900');
+
+$primary-color: #ffcc00;
+$icons-color: #cccccc;
+$primary-font: 'Raleway', sans-serif;
+$heading-font: 'Roboto', sans-serif;
+
+body{
+	font: 500 14px/1.7 $primary-font;
+}
+
+/* Typography */
+h1,h2,h3,h4,h5 {
+	font-weight: 900;
+	font-family: $heading-font;
+	line-height: 1.2;
+}
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	text-decoration: none;
+	color: currentColor;
+	text-transform: uppercase;
+	border: 1px solid $primary-color;
+	// padding: 5px 15px;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1140px;
+}
+.ba-team {
+	padding: 110px 0;
+	text-align: center;
+	&__title {
+		position: relative;
+		text-transform: uppercase;
+		font-size: 60px;
+		color: $primary-color;
+		margin: 0 0 123px;
+		// line-height: 1.7;
+		&:after {
+			content: "";
+			display: block;
+			width: 450px;
+			height: 1px;
+			background-color: $primary-color;
+			margin: 42px auto 0;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			background: #fff url(../img/bonfire.svg) 50% no-repeat;
+			height: 20px;
+			width: 40px;
+			transform: translate(-50%, 50%);
+		}
+	}
+	&__subtitle {
+		font-family: $primary-font;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 500;
+		color: #898f8f;
+		margin: 0;
+	}
+}
+.ba-team-slider {
+	display: flex;
+	&__img, &__content {
+		flex: 1 1 50%;
+	}
+	&__img {
+		padding: 0 83px 0 53px;
+		display: flex;
+		align-items: center;
+		img {
+			border: 1px solid $primary-color;
+			display: block;
+			box-shadow: 105px 0 0px -85px #fff,
+			-105px 0 0 -85px #fff,
+			0 105px 0 -85px #fff,
+			0 -105px  0 -85px #fff;
+		}
+	}
+	&__img-border {
+		border: 1px solid $primary-color;
+		padding: 15px;
+	}
+	&__content {
+		text-align: center;
+		border-left: 1px solid $primary-color;
+		padding: 13px 60px;
+		color: #666666;
+		line-height: 1.75;
+		.ba-team-name {
+			position: relative;
+			font-size: 36px;
+			font-family: $heading-font;
+			margin: 0;
+			letter-spacing: 0.02em;
+			padding-bottom: 27px;
+			&:after {
+				content: "";
+				position: absolute;
+				height: 1px;
+				border-bottom: 1px solid $primary-color;
+				background-color: $primary-color;
+				// width: 30%;
+				width: 100px;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		.ba-team-position {
+			font-size: 24px;
+			font-weight: 400;
+			margin: 0;
+			padding: 22px 0;
+		}
+		.ba-socials {
+			padding-bottom: 10px;
+			color: $icons-color;
+			&__img {
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				border: 1px solid currentColor;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 30px;
+				margin-left: 2px;
+				&:hover {
+					color: $primary-color;
+					svg {
+						fill:currentColor;
+					}
+				}
+				& svg {
+					fill:currentColor;
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+		.ba-divider {
+			position: relative;
+			padding: 3px 0 30px;
+
+		}
+		.ba-divider:before {
+			content: "";
+			position: absolute;
+			background: $primary-color;
+			background: linear-gradient(to right,
+				 $primary-color 0%,  $primary-color 20%,
+				#fff 20%,  #fff 30%,
+				$primary-color 30%, $primary-color 70%,
+				#fff 70%, #fff 80%,
+				$primary-color 80%);
+			width: 50px;
+			height: 3px;
+			left: 50%;
+			transform:translateX(-50%);
+		}
+		.ba-button {
+			font-weight: bold;
+			padding: 0 15px;
+			color: #666666;
+			&:hover {
+				color: darken(#666666, 20%);
+				background: $primary-color;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
