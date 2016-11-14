@@ -938,7 +938,7 @@ select {
   width: 30px;
   height: 30px;
   display: inline-block;
-  border: 1px solid currentColor;
+  border: 2px solid currentColor;
   border-radius: 50%;
   text-align: center;
   line-height: 30px;
